@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from "../../models/locations.model";
+import { Subscription } from "rxjs";
+import { UsersService } from "../../services/users.services";
 
 @Component({
   selector: 'app-locations',
@@ -6,10 +9,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./locations.component.scss']
 })
 export class LocationsComponent implements OnInit {
+  locations?: Location[];
+  locationsSubscription?: Subscription;
 
-  constructor() { }
+  constructor(private usersService: UsersService) { }
 
   ngOnInit(): void {
+    this.locationsSubscription = this.usersService.getLocations().subscribe((locations) => {
+      this.locations = locations.results;
+    });
   }
 
+  ngOnDestroy(): void {
+    this.locationsSubscription?.unsubscribe();
+  }
 }

@@ -1,5 +1,11 @@
 <section class="section">
   <div class="container">
-    <p>locations works!</p>
+    <div *ngFor="let location of locations">
+      <div class="card">
+        <p class="name">{{ location.name }}</p>
+        <p class="info"><span class="type">Dimension: </span>{{ location.dimension }}</p>
+        <p class="info"><span class="type">Residents: </span>{{ location.residents.length }}</p>
+      </div>
+    </div>
   </div>
 </section>

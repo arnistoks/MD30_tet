@@ -1,13 +1,14 @@
 <section class="section">
-  <div *ngIf="!loading$">Loading...</div>
+<!--  <div *ngIf="loading$">Loading...</div>-->
   <div class="container">
     <div *ngFor="let character of characters">
       <div class="card">
         <img class="img" src="{{ character.image }}" alt="{{ character.name }}" width="250">
         <p class="name">{{ character.name }}</p>
         <p class="info"><span class="type">Gender: </span>{{ character.gender }}</p>
-        <p class="info"><span class="type">Episodes: </span>{{ character.episode.length }}</p>
-        <button class="button">Show more</button>
+        <p class="info"><span class="type">Episode count: </span>{{ character.episode.length }}</p>
+<!--        <button class="button" [routerLink]="'/characters/' + character.id">Show more</button>-->
+        <button class="button" [routerLink]="['/characters', character.id]">Show more</button>
       </div>
     </div>
   </div>

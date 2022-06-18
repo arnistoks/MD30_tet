@@ -20,12 +20,12 @@
 
 .card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  gap: 20px;
   padding: 20px;
   border-radius: 40px;
   background-color: #FBF977;
-  width: 400px;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
@@ -35,17 +35,17 @@
 }
 
 .name {
-  font-size: 22px;
+  font-size: 30px;
   color: #337e2e;
   text-shadow: 2px 2px #71ca14;
 }
 
 .info {
-  font-size: 20px;
+  font-size: 24px;
   color: #337e2e;
 }
 
 .type {
-  font-size: 16px;
+  font-size: 20px;
   color: #71ca14;
 }

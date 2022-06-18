@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Character } from "../../models/character.model";
 import { UsersService } from "../../services/users.services";
-import {Observable, Subscription } from "rxjs";
+import { Observable, Subscription } from "rxjs";
 
 @Component({
   selector: 'app-characters',
@@ -13,7 +13,7 @@ export class CharactersComponent implements OnInit, OnDestroy {
   characters?: Character[];
   // charactersSubscription: Subscription | undefined;
   charactersSubscription?: Subscription;
-  loading$?: Observable<boolean>;
+  loading$: Observable<boolean> | undefined;
 
   constructor(private usersService: UsersService) { }
 

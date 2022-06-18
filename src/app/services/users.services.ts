@@ -1,7 +1,8 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { CharacterApiResponse } from "../models/character.model";
-import { BehaviorSubject, catchError, finalize, Observable } from "rxjs";
+import {Character, CharacterApiResponse} from "../models/character.model";
+import { BehaviorSubject, finalize, Observable } from "rxjs";
+import { LocationApiResponse } from "../models/locations.model";
 
 @Injectable ({
   providedIn: 'root'
@@ -25,8 +26,15 @@ export class UsersService {
     );
   }
 
+  getCharacter(id: number): Observable<Character> {
+    return this.http.get<Character>(`${this.baseUrl}/character/${id}`)
+  }
+
   getLoading(): Observable<boolean> {
-    console.log(this.loading)
     return this.loading.asObservable();
+  }
+
+  getLocations(): Observable<LocationApiResponse> {
+    return this.http.get<LocationApiResponse>(`${this.baseUrl}/location`);
   }
 }

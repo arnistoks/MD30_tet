@@ -8,6 +8,7 @@ import { LocationsComponent } from './pages/locations/locations.component';
 import { Page404Component } from './pages/page404/page404.component';
 import { HeaderComponent } from './components/header/header.component';
 import {HttpClientModule} from "@angular/common/http";
+import { CharacterComponent } from './pages/character/character.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {HttpClientModule} from "@angular/common/http";
     CharactersComponent,
     LocationsComponent,
     Page404Component,
-    HeaderComponent
+    HeaderComponent,
+    CharacterComponent
   ],
   imports: [
     BrowserModule,

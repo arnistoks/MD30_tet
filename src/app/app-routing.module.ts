@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CharactersComponent } from './pages/characters/characters.component';
 import { LocationsComponent } from './pages/locations/locations.component';
 import { Page404Component } from './pages/page404/page404.component';
+import { CharacterComponent } from "./pages/character/character.component";
 
 const routes: Routes = [
   {
@@ -13,6 +14,10 @@ const routes: Routes = [
   {
     path: 'characters',
     component: CharactersComponent,
+  },
+  {
+    path: 'characters/:id',
+    component: CharacterComponent,
   },
   {
     path: 'locations',
