@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.button {
+  cursor: pointer;
+  font-size: 20px;
+  background-color: #337e2e;
+  color: #71ca14;
+  border: none;
+  border-radius: 30px;
+  transition: 0.3s;
+  width: 100%;
+  padding: 0 20px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}
+
+.input {
+  font-size: 20px;
+}
+
+.select {
+  font-size: 20px;
+}
