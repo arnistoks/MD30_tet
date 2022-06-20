@@ -9,6 +9,8 @@ import { Page404Component } from './pages/page404/page404.component';
 import { HeaderComponent } from './components/header/header.component';
 import {HttpClientModule} from "@angular/common/http";
 import { CharacterComponent } from './pages/character/character.component';
+import { FormComponent } from './components/form/form.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { CharacterComponent } from './pages/character/character.component';
     LocationsComponent,
     Page404Component,
     HeaderComponent,
-    CharacterComponent
+    CharacterComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

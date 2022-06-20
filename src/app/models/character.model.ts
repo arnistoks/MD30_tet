@@ -34,3 +34,8 @@ interface CharacterLocation {
   name: string;
   url: string;
 }
+
+export interface CharacterQuery {
+  name: string;
+  gender: 'female' | 'male' | 'genderless' | 'unknown' | '';
+}

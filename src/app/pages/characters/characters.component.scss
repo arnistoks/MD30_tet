@@ -15,18 +15,26 @@
   gap: 40px;
   justify-content: center;
   padding: 20px;
-  min-height: calc(100vh - 185px);
+  min-height: calc(100vh - 221px);
 }
 
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   padding: 20px;
   border-radius: 40px;
   background-color: #FBF977;
-  width: 296px;
+  width: 300px;
+  min-height: 450px;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .img {
@@ -66,4 +74,10 @@
   &:active {
     opacity: 1;
   }
+}
+
+.form {
+  width: 100%;
+  max-width: 1400px;
+  background-color: white;
 }
